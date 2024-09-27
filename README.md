@@ -13,7 +13,6 @@
 `docker-compose up -d`
 ## Структура проекта
 ```
-/мониторинг/
 │
 ├── docker-compose.yml
 ├── config.yml            # Файл конфигурации Promtail
