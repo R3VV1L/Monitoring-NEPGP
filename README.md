@@ -1,4 +1,4 @@
-# **Monitoring-NEPGP**
+﻿# **Monitoring-NEPGP**
 ## Описание проекта
 В этом проекте используется стек мониторинга, включающий Prometheus, Grafana и Promtail. Данный стек позволяет собирать, хранить и визуализировать метрики и логи из различных источников.
 ## Стек технологий
@@ -12,8 +12,8 @@
 ### Запуск
 `docker-compose up -d`
 ## Структура проекта
-```/мониторинг/
+```
 │
 ├── docker-compose.yml
 ├── config.yml            # Файл конфигурации Promtail
-└── prometheus.yml        # Файл конфигурации Prometheus```
+└── prometheus.yml        # Файл конфигурации Prometheus
