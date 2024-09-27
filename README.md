@@ -12,8 +12,8 @@
 ### Запуск
 `docker-compose up -d`
 ## Структура проекта
-```/мониторинг/
+```мониторинг
 │
 ├── docker-compose.yml
 ├── config.yml            # Файл конфигурации Promtail
-└── prometheus.yml        # Файл конфигурации Prometheus```
+└── prometheus.yml        # Файл конфигурации Prometheus
