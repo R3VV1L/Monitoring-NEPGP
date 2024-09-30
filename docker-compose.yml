@@ -1,3 +1,7 @@
+version: '3'
+
+services:
+  promtail:
     image: grafana/promtail:2.9.4
     ports:
       - "9080:9080"
@@ -7,6 +11,7 @@
     command: -config.file=/etc/promtail/config.yml
     networks:
       - loki
+    restart: always
 
   prometheus:
     image: prom/prometheus
@@ -18,12 +23,14 @@
       - prometheus_data:/prometheus
     depends_on:
       - node_exporter
+    restart: always
 
   node_exporter:
     image: prom/node-exporter
     container_name: node_exporter
     ports:
       - 9101:9100
+    restart: always
 
   grafana:
     image: grafana/grafana
@@ -32,11 +39,10 @@
       - 3101:3000
     networks:
       - loki
+    restart: always
+
 volumes:
   prometheus_data:
     driver: local
   node_exporter_data:
     driver: local
-    driver_opts:
-      type: none
-      device: /pr
