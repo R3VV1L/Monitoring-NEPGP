@@ -10,7 +10,9 @@
 * Установленный Docker
 * Установленный Docker Compose
 ### Запуск
-`docker-compose up -d`
+```
+docker-compose up -d
+```
 ## Структура проекта
 ```
 │
